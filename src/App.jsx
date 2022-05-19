@@ -1,5 +1,7 @@
-import Router from './cores/router';
+import React from 'react';
 import { ThemeProvider } from 'styled-components';
+
+import Router from './cores/router';
 import GlobalStyle from './styles/globalStyle';
 import { theme } from './styles/theme';
 
@@ -8,7 +10,7 @@ function App() {
     <>
       <GlobalStyle />
       <ThemeProvider theme={theme}>
-      <Router />
+        <Router />
       </ThemeProvider>
     </>
   );
