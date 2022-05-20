@@ -8,7 +8,6 @@ const GlobalStyle = createGlobalStyle`
   /* @font-face {font-family:; src: url("") format(""); } */
   #root, body,html {
     margin: 0 auto;
-    font-size: 10px; 
     /* font-family: ""; */
   }
   #root{
