@@ -160,11 +160,6 @@ const Googlebox = styled.div`
     height: 9.9rem !important;
     border-radius: 500px !important;
     font-size: 4rem !important;
-    color: black !important;
-    padding-left: 7.5rem !important;
-    font-family: 'GmarketSansTTFMedium' !important;
-    border: 1px solid black !important;
-    z-index: 100000000;
   }
 
   & .google-login {
@@ -234,7 +229,6 @@ function MainPage() {
           onSuccess={onSuccess}
           onFailure={onFailure}
           className="google-login"
-          icon={false}
           // style={style}
         />
       </Googlebox>

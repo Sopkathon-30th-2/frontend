@@ -68,115 +68,13 @@ const HowToUseTitle = styled.div`
   z-index: 1;
 `;
 
-const HowToUseFirst = styled.div`
-  text-align: center;
-  padding-top: 0.8rem;
-
-  font-size: 3.2rem;
-  margin-left: 52.8rem;
-  margin-top: 307.8rem;
-  width: 4.8rem;
-  height: 4.8rem;
-  border-radius: 24px;
-  color: #ffb800;
-  background-color: #363469;
-  position: absolute;
-`;
-const HowToUseSecond = styled.div`
-  font-size: 3.2rem;
-  text-align: center;
-  padding-top: 0.8rem;
-
-  margin-left: 93.6rem;
-  margin-top: 307.8rem;
-  width: 4.8rem;
-  height: 4.8rem;
-  border-radius: 24px;
-  color: #ffb800;
-  background-color: #363469;
-  position: absolute;
-`;
-const HowToUseThird = styled.div`
-  text-align: center;
-  padding-top: 0.8rem;
-  font-size: 3.2rem;
-  margin-left: 134.4rem;
-  margin-top: 307.8rem;
-  width: 4.8rem;
-  height: 4.8rem;
-  border-radius: 24px;
-  color: #ffb800;
-  background-color: #363469;
-  position: absolute;
-`;
-
-const RoutineFirst = styled.div`
-  text-align: center;
-  padding-top: 0.8rem;
-  font-size: 3.2rem;
-  margin-left: 45.6rem;
-  margin-top: 352rem;
-  width: 19.3rem;
-  height: 3.2rem;
-  color: #363469;
-  position: absolute;
-`;
-const RoutineSecond = styled.div`
-  text-align: center;
-  padding-top: 0.8rem;
-  font-size: 3.2rem;
-  margin-left: 84.3rem;
-  margin-top: 352.1rem;
-  width: 23.4rem;
-  height: 3.2rem;
-  color: #363469;
-  position: absolute;
-`;
-const RoutineThird = styled.div`
-  text-align: center;
-  padding-top: 0.8rem;
-  font-size: 3.2rem;
-  margin-left: 130.2rem;
-  margin-top: 352.1rem;
-  width: 13.3rem;
-  height: 3.2rem;
-  color: #363469;
-  position: absolute;
-`;
-
 const Googlebox = styled.div`
   position: absolute;
   background-color: #f2eeff;
-  width: 192rem;
+  width: 140rem;
   height: 51.2rem;
   margin-top: 372.3rem;
-  margin-left: 0;
-  & button {
-    position: absolute !important;
-    bottom: 27% !important;
-    right: 50% !important;
-    transform: translateX(50%) !important;
-    width: 52.6rem !important;
-    height: 9.9rem !important;
-    border-radius: 500px !important;
-    font-size: 4rem !important;
-    color: black !important;
-    padding-left: 7.5rem !important;
-    font-family: 'GmarketSansTTFMedium' !important;
-    border: 1px solid black !important;
-    z-index: 100000000;
-  }
-
-  & .google-login {
-    position: absolute;
-    bottom: 27%;
-    right: 50%;
-    transform: translateX(50%);
-    width: 52.6rem;
-    height: 9.9rem;
-    border-radius: 500px;
-    font-size: 4rem;
-  }
+  margin-left: 50rem;
 `;
 
 const GoogleTitle = styled.div`
@@ -184,6 +82,17 @@ const GoogleTitle = styled.div`
   width: 44.8rem;
   height: 4rem;
   margin-top: 379.8rem;
+  margin-left: 73.6rem;
+  font-size: 4rem;
+  text-align: center;
+  z-index: 1;
+`;
+
+const Googlebtn = styled.div`
+  position: absolute;
+  width: 44.8rem;
+  height: 40rem;
+  margin-top: 378.9rem;
   margin-left: 73.6rem;
   font-size: 4rem;
   text-align: center;
@@ -219,23 +128,15 @@ function MainPage() {
         <br /> 지구를 지켜봐요
       </MainContentSecond>
       <HowToUseTitle>어떻게 지구를 구할까요?</HowToUseTitle>
-      <HowToUseFirst>1</HowToUseFirst>
-      <HowToUseSecond>2</HowToUseSecond>
-      <HowToUseThird>3</HowToUseThird>
-      <RoutineFirst>G메일 로그인</RoutineFirst>
-      <RoutineSecond>정리할 기간 설정</RoutineSecond>
-      <RoutineThird>메일 정리</RoutineThird>
       <GoogleTitle>E:레인저 합류하기</GoogleTitle>
       <Googlebox>
         <GoogleLogin
-          buttonText="Google로 계속하기"
+          buttonText="구글계정으로 로그인"
           clientId={clientId}
           responseType={'id_token'}
           onSuccess={onSuccess}
           onFailure={onFailure}
-          className="google-login"
-          icon={false}
-          // style={style}
+          style={Googlebtn}
         />
       </Googlebox>
     </>

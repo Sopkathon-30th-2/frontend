@@ -151,32 +151,6 @@ const Googlebox = styled.div`
   height: 51.2rem;
   margin-top: 372.3rem;
   margin-left: 0;
-  & button {
-    position: absolute !important;
-    bottom: 27% !important;
-    right: 50% !important;
-    transform: translateX(50%) !important;
-    width: 52.6rem !important;
-    height: 9.9rem !important;
-    border-radius: 500px !important;
-    font-size: 4rem !important;
-    color: black !important;
-    padding-left: 7.5rem !important;
-    font-family: 'GmarketSansTTFMedium' !important;
-    border: 1px solid black !important;
-    z-index: 100000000;
-  }
-
-  & .google-login {
-    position: absolute;
-    bottom: 27%;
-    right: 50%;
-    transform: translateX(50%);
-    width: 52.6rem;
-    height: 9.9rem;
-    border-radius: 500px;
-    font-size: 4rem;
-  }
 `;
 
 const GoogleTitle = styled.div`
@@ -189,6 +163,19 @@ const GoogleTitle = styled.div`
   text-align: center;
   z-index: 1;
 `;
+
+const Googlebtn = styled.div`
+  position: absolute;
+  width: 44.8rem;
+  height: 40rem;
+  margin-top: 378.9rem;
+  margin-left: 73.6rem;
+  font-size: 4rem;
+  text-align: center;
+  z-index: 1;
+`;
+
+const 
 
 function MainPage() {
   const clientId = '875173824142-lrkt4j1fp9s1vvvstrtocv1bdpsk2v0u.apps.googleusercontent.com';
@@ -227,16 +214,17 @@ function MainPage() {
       <RoutineThird>메일 정리</RoutineThird>
       <GoogleTitle>E:레인저 합류하기</GoogleTitle>
       <Googlebox>
+        <Googlebtn>
         <GoogleLogin
           buttonText="Google로 계속하기"
           clientId={clientId}
           responseType={'id_token'}
           onSuccess={onSuccess}
           onFailure={onFailure}
-          className="google-login"
-          icon={false}
-          // style={style}
+          style={Googlebtn}
         />
+        </Googlebtn>
+
       </Googlebox>
     </>
   );
