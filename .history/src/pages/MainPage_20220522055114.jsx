@@ -6,8 +6,6 @@ import Frame from '../assets/image/Frame.png';
 const BackgroundIMG = styled.img`
   width: 119.4rem;
   height: 423.6rem;
-  margin-left: 36.6rem;
-  margin-top: -1.8rem;
 `;
 
 function MainPage() {
@@ -21,7 +19,7 @@ function MainPage() {
 
   return (
     <>
-      <BackgroundIMG src={Frame} />
+      <BackgroundIMG src="{Frame}" />
       <GoogleLogin
         buttonText="구글계정으로 로그인"
         clientId={clientId}

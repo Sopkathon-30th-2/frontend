@@ -3,11 +3,10 @@ import styled from 'styled-components';
 import GoogleLogin from 'react-google-login';
 import Frame from '../assets/image/Frame.png';
 
-const BackgroundIMG = styled.img`
+const BackgroundIMG = styled.div`
   width: 119.4rem;
   height: 423.6rem;
-  margin-left: 36.6rem;
-  margin-top: -1.8rem;
+  background-image: Frame;
 `;
 
 function MainPage() {
@@ -21,7 +20,7 @@ function MainPage() {
 
   return (
     <>
-      <BackgroundIMG src={Frame} />
+      <BackgroundIMG />
       <GoogleLogin
         buttonText="구글계정으로 로그인"
         clientId={clientId}

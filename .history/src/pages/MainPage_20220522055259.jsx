@@ -6,8 +6,6 @@ import Frame from '../assets/image/Frame.png';
 const BackgroundIMG = styled.img`
   width: 119.4rem;
   height: 423.6rem;
-  margin-left: 36.6rem;
-  margin-top: -1.8rem;
 `;
 
 function MainPage() {
