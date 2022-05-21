@@ -163,8 +163,6 @@ const Googlebox = styled.div`
     color: black !important;
     padding-left: 7.5rem !important;
     font-family: 'GmarketSansTTFMedium' !important;
-    border: 1px solid black !important;
-    z-index: 100000000;
   }
 
   & .google-login {

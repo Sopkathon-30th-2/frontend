@@ -1,0 +1,121 @@
+import React from 'react';
+import styled from 'styled-components';
+import GoogleLogin from 'react-google-login';
+import Frame from '../assets/image/Frame.png';
+import Logo from '../assets/image/MainPageLogo.png';
+
+const BackgroundIMG = styled.img`
+  width: 119.4rem;
+  height: 423.6rem;
+  margin-left: 36.6rem;
+  margin-top: -1.8rem;
+  position: absolute;
+  z-index: 2;
+`;
+
+const MainPageLogo = styled.img`
+  width: 60rem;
+  height: 37.2rem;
+  margin-top: 15.6rem;
+  margin-left: 66rem;
+  position: absolute;
+  z-index: 3;
+`;
+
+const HeaderContent = styled.div`
+  position: absolute;
+  width: 93.4rem;
+  height: 7.4rem;
+  margin-top: 59.6rem;
+  margin-left: 49.3rem;
+  font-size: 3.2rem;
+  text-align: center;
+  z-index: 1;
+`;
+const MainContent_first = styled.div`
+  position: absolute;
+  width: 72.3rem;
+  height: 7.4rem;
+  margin-top: 167.3rem;
+  margin-left: 59.9rem;
+  font-size: 3.2rem;
+  text-align: center;
+  z-index: 1;
+`;
+const MainContent_second = styled.div`
+  position: absolute;
+  width: 52.6rem;
+  height: 7.4rem;
+  margin-top: 263.2rem;
+  margin-left: 69.7rem;
+  font-size: 3.2rem;
+  text-align: center;
+  z-index: 1;
+`;
+
+const HowToUseTitle = styled.div`
+  position: absolute;
+  width: 43.3rem;
+  height: 4rem;
+  margin-top: 292.3rem;
+  margin-left: 74.3rem;
+  font-size: 4rem;
+  text-align: center;
+  z-index: 1;
+`;
+
+const Googlebtn = styled.div`
+  position: absolute;
+  width: 52.6rem;
+  height: 9.9rem;
+  margin-top: 399.4rem;
+  margin-left: 69.7rem;
+  font-size: 4rem;
+  text-align: center;
+  z-index: 1;
+`;
+
+function MainPage() {
+  const clientId = '875173824142-lrkt4j1fp9s1vvvstrtocv1bdpsk2v0u.apps.googleusercontent.com';
+  const onSuccess = async (response) => {
+    console.log(response);
+  };
+  const onFailure = (error) => {
+    console.log(error);
+  };
+
+  return (
+    <>
+      <div>
+        <MainPageLogo src={Logo} />
+      </div>
+      <div>
+        <BackgroundIMG src={Frame} />
+      </div>
+      <HeaderContent>
+        지구의 e존층을 통해 쓸모 없는 인터넷 기록들이 넘쳐 흐르고 있어요. <br /> 지구가 E:레이저들에게 도움을 요청하고
+        있어요
+      </HeaderContent>
+      <MainContent_first>
+        아파하는 지구를 위해 <br /> 오래된 메일함을 정리할 새로운 E:레인저가 필요해요
+      </MainContent_first>
+      <MainContent_second>
+        E-레인저가 되어 e메일함을 정리하고
+        <br /> 지구를 지켜봐요
+      </MainContent_second>
+      <HowToUseTitle>어떻게 지구를 구할까요?</HowToUseTitle>
+      <Googlebtn>
+        <GoogleLogin
+          buttonText="구글계정으로 로그인"
+          clientId={clientId}
+          responseType={'id_token'}
+          onSuccess={onSuccess}
+          onFailure={onFailure}
+          style={Googlebtn}
+        />
+      </Googlebtn>
+    </>
+  );
+}
+
+export default MainPage;
