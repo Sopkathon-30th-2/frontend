@@ -24,16 +24,14 @@
 
 </br>
 </br>
-</br>
-</br>
 
 ## `프로젝트 소개`
 
-### 💫 일상 속 무심코 지나쳤던 인터넷 속 email! 사실 엄청난 나비효과를 불러오고 있었다! 🦋 @-레이저가 없애줄게! 🧝‍♂️
+### 💫 일상 속 무심코 쌓여온 인터넷 속 email! @-레이저가 없애줄게! 🧝‍♂️
 
 > 서비스 설명~
 
-</br>
+</@-레이저가>
 </br>
 
 # 📄 IA
@@ -91,9 +89,8 @@ refactor: 코드 리팩토링에 대한 커밋
 
   1. **vscode extension에서 eslint + prettier 설치**
 
-     ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8fcb8def-3d9d-44b9-be06-298c6706aa88/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8fcb8def-3d9d-44b9-be06-298c6706aa88/Untitled.png)
-
-     ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5b5bec33-fc07-4aff-bb96-99552ce3bfc4/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5b5bec33-fc07-4aff-bb96-99552ce3bfc4/Untitled.png)
+  ![eslint](https://user-images.githubusercontent.com/68318945/169663338-5e6f6431-15a0-45c7-8337-c5fd2b82d975.png)
+  ![prettier](https://user-images.githubusercontent.com/68318945/169663336-7ff5c5f9-aa0f-4b0b-9dab-b6b492c95cb0.png)
 
   2. setting.json (`command + ,` or `ctrl + ,`) 수정하기
 
