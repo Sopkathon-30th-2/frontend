@@ -163,49 +163,41 @@ refactor: 코드 리팩토링에 대한 커밋
 </br>
 
 ```
+├── README.md
 ├── package.json
 ├── public
-│   └── index.html
+│   ├── favicon.ico
+│   ├── index.html
+│   └── manifest.json
 └── src
-    ├── App.js
+    ├── App.jsx
     ├── assets
-    │   ├── fonts
-    │   │   ├── NotoSansCJKkr-Regular.otf
-    │   │   ├── NotoSansKR-Regular.woff
-    │   │   ├── NotoSansKR-Regular.woff2
-    │   │   └── font.js
-    │   ├── icons
-    │   │   ├── Logo.svg
-    │   │   └── star.svg
-    │   ├── images
-    │   │   ├── Planet.svg
-    │   │   ├── background.svg
-    │   │   ├── brand-logo.svg
-    │   │   ├── example.svg
-    │   │   ├── happy.svg
-    │   │   ├── sad.svg
-    │   │   ├── sorry.svg
-    │   │   └── touching.svg
-    │   └── index.js
+    │   ├── font
+    │   ├── icon
+    │   └── image
     ├── components
-    │   ├── common
-    │   │   ├── Header.js
-    │   │   └── Planet.js
-    │   └── index.js
-    ├── index.js
+    │   ├── GetDataTest.jsx
+    │   └── common
+    │       ├── ErrorBoundary.jsx
+    │       ├── ErrorComponent.jsx
+    │       └── Loading.jsx
+    ├── constants
+    ├── cores
+    │   └── router.jsx
+    ├── hooks
+    ├── index.jsx
     ├── lib
-    │   ├── getApi.js
-    │   └── postApi.js
-    ├── pages
-    │   ├── Emotion.js
-    │   ├── Login.js
-    │   ├── Main.js
-    │   ├── Read.js
-    │   ├── Write.js
     │   └── index.js
-    └── styles
-        ├── GlobalStyle.js
-        └── theme.js
+    ├── pages
+    │   ├── CleanMailPage.jsx
+    │   ├── Mainpage.jsx
+    │   ├── ResultPage.jsx
+    │   └── Sample.jsx
+    ├── styles
+    │   ├── globalStyle.jsx
+    │   └── theme.jsx
+    └── utils
+        └── wrapPromise.js
 ```
 
 </br>
