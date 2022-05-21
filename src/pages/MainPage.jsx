@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { Suspense, useState } from 'react';
 import styled from 'styled-components';
+import ErrorBoundary from '../components/common/ErrorBoundary';
+import ErrorComponent from '../components/common/ErrorComponent';
+import Loading from '../components/common/Loading';
+import { fetchData } from '../lib';
+const GetDataTest = React.lazy(() => import('../components/GetDataTest'));
 
 function MainPage() {
+  const [resetKey, setResetKey] = useState('');
   return (
     <StyledRoot>
-      <p>다인 나희 웰컴~~~~~~</p>
+      <ErrorBoundary renderFallback={({ error }) => <ErrorComponent error={error} />} resetKey={resetKey}>
+        <Suspense fallback={<Loading />}>
+          <GetDataTest resoure={fetchData()} />
+        </Suspense>
+      </ErrorBoundary>
     </StyledRoot>
   );
 }
