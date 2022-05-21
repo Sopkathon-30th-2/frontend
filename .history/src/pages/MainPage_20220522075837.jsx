@@ -151,31 +151,15 @@ const Googlebox = styled.div`
   height: 51.2rem;
   margin-top: 372.3rem;
   margin-left: 0;
-  & button {
-    position: absolute !important;
-    bottom: 27% !important;
-    right: 50% !important;
-    transform: translateX(50%) !important;
-    width: 52.6rem !important;
-    height: 9.9rem !important;
-    border-radius: 500px !important;
-    font-size: 4rem !important;
-    color: black !important;
-    padding-left: 7.5rem !important;
-    font-family: 'GmarketSansTTFMedium' !important;
-    border: 1px solid black !important;
-    z-index: 100000000;
-  }
 
   & .google-login {
     position: absolute;
-    bottom: 27%;
+    bottom: 30%;
     right: 50%;
     transform: translateX(50%);
     width: 52.6rem;
     height: 9.9rem;
-    border-radius: 500px;
-    font-size: 4rem;
+    border-radius: 88px;
   }
 `;
 
@@ -234,7 +218,6 @@ function MainPage() {
           onSuccess={onSuccess}
           onFailure={onFailure}
           className="google-login"
-          icon={false}
           // style={style}
         />
       </Googlebox>

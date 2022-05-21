@@ -9,7 +9,7 @@ const GlobalStyle = createGlobalStyle`
   #root, body,html {
     margin: 0 auto;
     font-size: 10px; 
-    font-family: "GmarketSansTTFMedium";
+    font-family: "Gmarket sans";
   }
   #root{
     /* background-color: ; */
