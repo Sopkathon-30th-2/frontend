@@ -163,7 +163,49 @@ refactor: 코드 리팩토링에 대한 커밋
 </br>
 
 ```
-디렉토리 구조 삽입
+├── package.json
+├── public
+│   └── index.html
+└── src
+    ├── App.js
+    ├── assets
+    │   ├── fonts
+    │   │   ├── NotoSansCJKkr-Regular.otf
+    │   │   ├── NotoSansKR-Regular.woff
+    │   │   ├── NotoSansKR-Regular.woff2
+    │   │   └── font.js
+    │   ├── icons
+    │   │   ├── Logo.svg
+    │   │   └── star.svg
+    │   ├── images
+    │   │   ├── Planet.svg
+    │   │   ├── background.svg
+    │   │   ├── brand-logo.svg
+    │   │   ├── example.svg
+    │   │   ├── happy.svg
+    │   │   ├── sad.svg
+    │   │   ├── sorry.svg
+    │   │   └── touching.svg
+    │   └── index.js
+    ├── components
+    │   ├── common
+    │   │   ├── Header.js
+    │   │   └── Planet.js
+    │   └── index.js
+    ├── index.js
+    ├── lib
+    │   ├── getApi.js
+    │   └── postApi.js
+    ├── pages
+    │   ├── Emotion.js
+    │   ├── Login.js
+    │   ├── Main.js
+    │   ├── Read.js
+    │   ├── Write.js
+    │   └── index.js
+    └── styles
+        ├── GlobalStyle.js
+        └── theme.js
 ```
 
 </br>
