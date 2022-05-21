@@ -1,20 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
-import HeaderLogo from '../common/Header';
-import CustomCalendar from '../cleanEmail/CustomCalendar';
-import mailTitle from '../../assets/image/mail_title.svg';
 import XIcon from '../../assets/icon/XIcon.svg';
 import ColonIcon from '../../assets/icon/ColonIcon.svg';
-import CleanMail from '../../components/cleanEmail/CleanMail';
 
-function NoticeMailCount() {
+function NoticeMailCount({ resource }) {
+  const [data, setData] = useState(resource.read());
+
   return (
     <>
-      <Styled.HeaderTitle>000개의 메일이 지구에 넘쳐흐르고 있어요!</Styled.HeaderTitle>
+      <Styled.HeaderTitle>{data?.data?.data}개의 메일이 지구에 넘쳐흐르고 있어요!</Styled.HeaderTitle>
       <Styled.BoxWrapper>
         <Styled.FirstBox>
           <div className="circle">
-            <span className="title">100</span>
+            <span className="title">{data?.data?.data}</span>
             <span className="sub-title">개</span>
           </div>
           <p className="description">오래된 메일 개수</p>
@@ -30,7 +28,7 @@ function NoticeMailCount() {
         <img src={ColonIcon} alt="= 아이콘" />
         <Styled.ThirdBox>
           <div className="circle">
-            <span className="title">400</span>
+            <span className="title">{data?.data?.data * 4}</span>
             <span className="sub-title">그램</span>
           </div>
           <p className="description">오래된 메일이 뿜는 온실가스</p>
