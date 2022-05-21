@@ -10,6 +10,7 @@
     "hoist-non-react-statics": "^3.3.2",
     "moment": "^2.29.3",
     "react": "^18.1.0",
+    "react-copy-to-clipboard": "^5.1.0",
     "react-calendar": "^3.7.0",
     "react-dom": "^18.1.0",
     "react-google-login": "^5.2.2",
