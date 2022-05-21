@@ -87,9 +87,8 @@ refactor: 코드 리팩토링에 대한 커밋
 - **⚙ eslint & prettier 사용하기 위한 설정**
 
   1. **vscode extension에서 eslint + prettier 설치**
-
-  ![eslint](https://user-images.githubusercontent.com/68318945/169663338-5e6f6431-15a0-45c7-8337-c5fd2b82d975.png)
-  ![prettier](https://user-images.githubusercontent.com/68318945/169663336-7ff5c5f9-aa0f-4b0b-9dab-b6b492c95cb0.png)
+     ![eslint](https://user-images.githubusercontent.com/68318945/169663338-5e6f6431-15a0-45c7-8337-c5fd2b82d975.png)
+     ![prettier](https://user-images.githubusercontent.com/68318945/169663336-7ff5c5f9-aa0f-4b0b-9dab-b6b492c95cb0.png)
 
   2. setting.json (`command + ,` or `ctrl + ,`) 수정하기
 
