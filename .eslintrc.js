@@ -23,6 +23,7 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['import', 'react'],
+  parser: 'babel-eslint',
   rules: {
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
