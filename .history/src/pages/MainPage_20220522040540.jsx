@@ -5,18 +5,18 @@ import GoogleLogin from 'react-google-login';
 const Header = {
   Container: styled.div``,
   Title: styled.h1``,
-  Content: styled.p``,
+  Content: styled.p1``,
 };
 const MainContents = {
   Container: styled.div``,
   Image: styled.img``,
-  Content: styled.p``,
+  Content: styled.p1``,
 };
 const HowToUse = {
   Container: styled.div``,
   Title: styled.h1``,
   Number: styled.h1``,
-  Content: styled.p``,
+  Content: styled.p1``,
 };
 const LoginSector = {
   Container: styled.div``,

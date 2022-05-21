@@ -5,21 +5,24 @@ import GoogleLogin from 'react-google-login';
 const Header = {
   Container: styled.div``,
   Title: styled.h1``,
-  Content: styled.p``,
+  Content: styled.p1``,
 };
 const MainContents = {
   Container: styled.div``,
   Image: styled.img``,
-  Content: styled.p``,
+  Content: styled.p1``,
 };
 const HowToUse = {
   Container: styled.div``,
   Title: styled.h1``,
   Number: styled.h1``,
-  Content: styled.p``,
+  Content: styled.p1``,
 };
 const LoginSector = {
   Container: styled.div``,
+  LoginButton: styled.button`
+    border: 1px solid;
+  `,
   Title: styled.h1``,
 };
 
@@ -33,7 +36,7 @@ function MainPage() {
   };
 
   return (
-    <>
+    <LoginSector.LoginButton>
       <GoogleLogin
         buttonText="구글계정으로 로그인"
         clientId={clientId}
@@ -41,7 +44,7 @@ function MainPage() {
         onSuccess={onSuccess}
         onFailure={onFailure}
       />
-    </>
+    </LoginSector.LoginButton>
   );
 }
 

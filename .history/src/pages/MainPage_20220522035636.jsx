@@ -5,23 +5,27 @@ import GoogleLogin from 'react-google-login';
 const Header = {
   Container: styled.div``,
   Title: styled.h1``,
-  Content: styled.p``,
+  Content: styled.p1``,
 };
 const MainContents = {
   Container: styled.div``,
   Image: styled.img``,
-  Content: styled.p``,
+  Content: styled.p1``,
 };
 const HowToUse = {
   Container: styled.div``,
   Title: styled.h1``,
   Number: styled.h1``,
-  Content: styled.p``,
+  Content: styled.p1``,
 };
 const LoginSector = {
   Container: styled.div``,
   Title: styled.h1``,
 };
+
+const GoogleLogin = styled.button`
+
+`;
 
 function MainPage() {
   const clientId = '875173824142-lrkt4j1fp9s1vvvstrtocv1bdpsk2v0u.apps.googleusercontent.com';
