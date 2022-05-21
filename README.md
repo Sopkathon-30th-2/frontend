@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="이미지 삽입할 것임">
+<!-- <img src="이미지 삽입할 것임"> -->
 
 ##
 
