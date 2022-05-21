@@ -36,7 +36,7 @@ const Container = styled.main`
   align-items: center;
   padding: 85px 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
 `;
 
 const StyledButton = styled.button`
@@ -49,6 +49,8 @@ const StyledButton = styled.button`
   font-size: 32px;
   line-height: 1;
   color: #ffb800;
+  padding-top: 29px;
+  padding-bottom: 29px;
 `;
 
 const ResultImg = styled.img`

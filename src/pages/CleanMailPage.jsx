@@ -1,23 +1,38 @@
-import React from 'react';
+import React, { Suspense, useState, useMemo } from 'react';
 import styled from 'styled-components';
 import HeaderLogo from '../components/common/Header';
-import CustomCalendar from '../components/cleanEmail/CustomCalendar';
-
-const HeaderTitle = styled.div`
-  color: #363469;
-  text-align: center;
-  margin-top: 25.7rem;
-  font-size: 3.2rem;
-`;
+import CleanMail from '../components/cleanEmail/CleanMail';
+import NoticeMailCount from '../components/cleanEmail/NoticeMailCount';
+import Loading from '../components/common/Loading';
+import ErrorBoundary from '../components/common/ErrorBoundary';
+import ErrorComponent from '../components/common/ErrorComponent';
+import { fetchMailCountData } from '../lib/getUserMailData';
+import { fetchDeleteMailData } from '../lib/deleteMail';
 
 function CleanMailPage() {
+  const [resetKey, setResetKey] = useState(true);
+
   return (
-    <div>
+    <Styled.Root>
       <HeaderLogo />
-      <HeaderTitle>000개의 메일이 지구에 넘쳐흐르고 있어요!</HeaderTitle>
-      <CustomCalendar />
-    </div>
+      <ErrorBoundary renderFallback={({ error }) => <ErrorComponent error={error} />} resetKey={resetKey}>
+        <Suspense fallback={<Loading />}>
+          <NoticeMailCount resource={fetchMailCountData()} />
+          <CleanMail />
+        </Suspense>
+      </ErrorBoundary>
+    </Styled.Root>
   );
 }
 
 export default CleanMailPage;
+
+const Styled = {
+  Root: styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  `,
+  MailTitle: styled.img``,
+};
