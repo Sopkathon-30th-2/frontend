@@ -173,7 +173,7 @@ refactor: 코드 리팩토링에 대한 커밋
 
 ```
 main > 각자의 브랜치
-ex ) main ← feature/윤선-1, feature/체다-1, feature/나희-1, feature/나희-2
+ex ) main ← feature/남준-1, feature/체다-1, feature/나희-1, feature/나희-2
 각자의 브랜치에서 pull request 하고 코드 리뷰 후 merge
 ```
 
