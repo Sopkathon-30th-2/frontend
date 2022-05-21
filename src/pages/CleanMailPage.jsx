@@ -5,13 +5,14 @@ import CustomCalendar from '../components/cleanEmail/CustomCalendar';
 import mailTitle from '../assets/image/mail_title.svg';
 import XIcon from '../assets/icon/XIcon.svg';
 import ColonIcon from '../assets/icon/ColonIcon.svg';
+import CleanMail from '../components/cleanEmail/CleanMail';
 
 function CleanMailPage() {
   return (
     <Styled.Root>
       <HeaderLogo />
       <Styled.HeaderTitle>000개의 메일이 지구에 넘쳐흐르고 있어요!</Styled.HeaderTitle>
-      <Styled.MailTitle src={mailTitle} alt="정리할 기간 설정하기" />
+      {/* <Styled.MailTitle src={mailTitle} alt="정리할 기간 설정하기" /> */}
       <Styled.BoxWrapper>
         <Styled.FirstBox>
           <div className="circle">
@@ -37,7 +38,8 @@ function CleanMailPage() {
           <p className="description">오래된 메일이 뿜는 온실가스</p>
         </Styled.ThirdBox>
       </Styled.BoxWrapper>
-      <CustomCalendar />
+      <CleanMail />
+      {/* <CustomCalendar /> */}
     </Styled.Root>
   );
 }
@@ -65,6 +67,7 @@ const Styled = {
   MailTitle: styled.img``,
   BoxWrapper: styled.section`
     margin-top: 4.6rem;
+    margin-bottom: 14rem;
     display: flex;
     .description {
       font-family: 'Gmarket Sans';

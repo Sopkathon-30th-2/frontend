@@ -4,23 +4,7 @@ import styled from 'styled-components';
 import 'react-calendar/dist/Calendar.css';
 import { flushSync } from 'react-dom';
 
-function CustomCalendar() {
-  // const [startDate, setStartDate] = useState();
-  // const [endDate, setEndDate] = useState();
-  const { startDate, endDate } = useMemo(() => {
-    const now = new Date();
-    now.setHours(0, 0, 0, 0);
-
-    return {
-      startDate: new Date(now.setMonth(now.getMonth() - 3)),
-      endDate: new Date(),
-    };
-  }, []);
-  const [[startMonth, endMonth], onChange] = useState([startDate, endDate]);
-  useEffect(() => {
-    console.log('start. end', startMonth, endMonth);
-  }, [startMonth, endMonth]);
-
+function CustomCalendar({ startMonth, endMonth, onChange }) {
   const onChangeCalendar = useCallback((value) => {
     console.log('@@@value', value);
     onChange(value);
@@ -56,8 +40,13 @@ export default CustomCalendar;
 
 const Styled = {
   Root: styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
     .react-calendar {
-      width: 400px;
+      margin-top: 2rem;
+      width: 700px;
       max-width: 100%;
       background-color: #fff;
       color: #222;
@@ -65,6 +54,7 @@ const Styled = {
       box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
       font-family: Arial, Helvetica, sans-serif;
       line-height: 1.125em;
+      position: absolute;
     }
     .react-calendar__navigation button {
       color: #6f48eb;
