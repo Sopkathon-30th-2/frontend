@@ -15,7 +15,7 @@ function MainPage() {
       console.log(window.gapi);
       window.gapi.load('auth2', () => {
         const auth2 = window.gapi.auth2.init({
-          client_id: '113973704987-f8t8kk1jtbgunnb9mko9p9jqjo5qaiqj.apps.googleusercontent.com',
+          client_id: '1021076538351-sci6kmqbkbqfutnj282s3u98085t2q1l.apps.googleusercontent.com',
           scope: 'profile email',
         });
         //버튼 클릭시 사용자 정보 불러오기
