@@ -1,6 +1,6 @@
 <div align="center">
 
-<!-- <img src="이미지 삽입할 것임"> -->
+<img src="https://user-images.githubusercontent.com/68318945/169671624-301a0650-82b1-43ff-93a9-2dfb369f0a92.png">
 
 ##
 
@@ -53,6 +53,89 @@
 
 </br>
 </br>
+
+# 📱 개발 환경 및 라이브러리
+
+</br>
+
+| 라이브러리              | 목적               |
+| :---------------------- | :----------------- |
+| Axios                   | 서버 통신          |
+| React                   | 사용자 인터페이스  |
+| styled-components       | 코드 레이아웃 작성 |
+| react-calendar          | 캘린더뷰(커스텀)   |
+| react-copy-to-clipboard | 클립보드           |
+| react-google-login      | 구글 소셜 로그인   |
+
+</br>
+</br>
+
+# 🔗 Dependecy
+
+```
+  "dependencies": {
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^13.0.0",
+    "@testing-library/user-event": "^13.2.1",
+    "axios": "^0.27.2",
+    "hoist-non-react-statics": "^3.3.2",
+    "moment": "^2.29.3",
+    "react": "^18.1.0",
+    "react-copy-to-clipboard": "^5.1.0",
+    "react-calendar": "^3.7.0",
+    "react-dom": "^18.1.0",
+    "react-google-login": "^5.2.2",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "5.0.1",
+    "styled-components": "^5.3.5",
+    "styled-reset": "^4.4.0",
+    "web-vitals": "^2.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.25.0",
+    "@typescript-eslint/parser": "^5.25.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^8.15.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^2.7.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.30.0",
+    "eslint-plugin-react-hooks": "^4.5.0",
+    "prettier": "^2.6.2"
+  }
+}
+```
 
 # 🌱 Commit Convention
 
@@ -169,8 +252,10 @@ refactor: 코드 리팩토링에 대한 커밋
 │   ├── favicon.ico
 │   ├── index.html
 │   └── manifest.json
+│   └── _redirects
 └── src
     ├── App.jsx
+    ├── index.jsx
     ├── assets
     │   ├── font
     │   ├── icon
@@ -180,6 +265,7 @@ refactor: 코드 리팩토링에 대한 커밋
     │   └── common
     │       ├── ErrorBoundary.jsx
     │       ├── ErrorComponent.jsx
+        │   ├── Header.jsx
     │       └── Loading.jsx
     ├── constants
     ├── cores
@@ -197,6 +283,7 @@ refactor: 코드 리팩토링에 대한 커밋
     │   ├── globalStyle.jsx
     │   └── theme.jsx
     └── utils
+    │   ├── app.js
         └── wrapPromise.js
 ```
 
