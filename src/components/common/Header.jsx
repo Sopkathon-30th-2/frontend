@@ -5,12 +5,12 @@ const HeaderLogo = {
   Logo: styled.img`
     width: 148px;
     height: 86.17px;
-    position: absolute;
-    align-items: center;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-top: 85px;
+    // position: absolute;
+    // align-items: center;
+    // top: 0;
+    // left: 50%;
+    // transform: translateX(-50%);
+    // margin-top: 85px;
   `,
 };
 
