@@ -1,4 +1,4 @@
-import React, { Suspense, useState } from 'react';
+import React, { Suspense, useState, useMemo } from 'react';
 import styled from 'styled-components';
 import HeaderLogo from '../components/common/Header';
 import CleanMail from '../components/cleanEmail/CleanMail';
@@ -7,9 +7,11 @@ import Loading from '../components/common/Loading';
 import ErrorBoundary from '../components/common/ErrorBoundary';
 import ErrorComponent from '../components/common/ErrorComponent';
 import { fetchMailCountData } from '../lib/getUserMailData';
+import { fetchDeleteMailData } from '../lib/deleteMail';
 
 function CleanMailPage() {
   const [resetKey, setResetKey] = useState(true);
+
   return (
     <Styled.Root>
       <HeaderLogo />

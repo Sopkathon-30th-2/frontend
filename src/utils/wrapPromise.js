@@ -5,6 +5,7 @@ export default function wrapPromise(promise) {
     (r) => {
       status = 'success';
       result = r;
+      console.log('>>성공햇니', r);
     },
     (e) => {
       status = 'error';
