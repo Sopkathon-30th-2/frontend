@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import HeaderLogo from '../components/common/Header';
 
 const HeaderTitle = styled.div`
-  color: #363469;
+  color: 363469;
   text-align: center;
-  margin-top: 25.7rem;
+  margin-top: 257px;
   font-size: 3.2rem;
 `;
 

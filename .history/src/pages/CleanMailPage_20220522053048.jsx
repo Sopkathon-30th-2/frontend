@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import HeaderLogo from '../components/common/Header';
 
 const HeaderTitle = styled.div`
+  font-family: 'gmarket sans bold';
   color: #363469;
   text-align: center;
   margin-top: 25.7rem;
