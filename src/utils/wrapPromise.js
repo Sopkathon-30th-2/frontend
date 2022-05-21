@@ -13,12 +13,13 @@ export default function wrapPromise(promise) {
   );
   return {
     read() {
-      if (status === 'pending') {
-        throw suspender;
-      } else if (status === 'error') {
-        throw result;
-      } else if (status === 'success') {
-        return result;
+      switch (status) {
+        case 'pending':
+          throw suspender;
+        case 'error':
+          throw result;
+        default:
+          return result;
       }
     },
   };
