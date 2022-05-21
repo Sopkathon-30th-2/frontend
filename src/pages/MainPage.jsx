@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import GoogleLogin from 'react-google-login';
 import Frame from '../assets/image/Frame.png';
 import Logo from '../assets/image/MainPageLogo.png';
+import { useNavigate } from 'react-router-dom';
 
 const BackgroundIMG = styled.img`
   width: 119.4rem;
@@ -147,12 +148,16 @@ const RoutineThird = styled.div`
 const Googlebox = styled.div`
   position: absolute;
   background-color: #f2eeff;
-  width: 192rem;
+  /* width: 192rem; */
+  width: 100%;
   height: 51.2rem;
   margin-top: 372.3rem;
   margin-left: 0;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
   & button {
-    position: absolute !important;
+    /* position: absolute !important; */
     bottom: 27% !important;
     right: 50% !important;
     transform: translateX(50%) !important;
@@ -161,10 +166,13 @@ const Googlebox = styled.div`
     border-radius: 500px !important;
     font-size: 4rem !important;
     color: black !important;
-    padding-left: 7.5rem !important;
+    /* padding-left: 7.5rem !important; */
     font-family: 'GmarketSansTTFMedium' !important;
     border: 1px solid black !important;
     z-index: 100000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   & .google-login {
@@ -192,12 +200,17 @@ const GoogleTitle = styled.div`
 
 function MainPage() {
   const clientId = '875173824142-lrkt4j1fp9s1vvvstrtocv1bdpsk2v0u.apps.googleusercontent.com';
+  const navigate = useNavigate();
   const onSuccess = async (response) => {
     console.log(response);
+    navigate('/cleanmail');
   };
   const onFailure = (error) => {
     console.log(error);
   };
+  //   const handleOnClick = () => {
+  //     navigate('/cleanmail');
+  //   };
 
   return (
     <>
@@ -235,6 +248,7 @@ function MainPage() {
           onFailure={onFailure}
           className="google-login"
           icon={false}
+          //   onClick={handleOnClick}
           // style={style}
         />
       </Googlebox>
