@@ -11,7 +11,7 @@ function CleanMail() {
     now.setHours(0, 0, 0, 0);
 
     return {
-      startDate: new Date(now.setMonth(now.getMonth() - 3)),
+      startDate: new Date(),
       endDate: new Date(),
     };
   }, []);
