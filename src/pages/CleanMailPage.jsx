@@ -1,7 +1,12 @@
 import React from 'react';
+import CustomCalendar from '../components/cleanEmail/CustomCalendar';
 
 function CleanMailPage() {
-  return <div>CleanMailPage</div>;
+  return (
+    <div>
+      <CustomCalendar />
+    </div>
+  );
 }
 
 export default CleanMailPage;
