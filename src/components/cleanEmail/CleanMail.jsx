@@ -45,7 +45,7 @@ function CleanMail() {
   return (
     <Styled.Root>
       <Styled.MailTitle src={mailTitle} alt="정리할 기간 설정하기" />
-      <Styled.Description>해당 기간동안 읽지 않은 메일들과 휴지통을 정리할 거에요</Styled.Description>
+      <Styled.Description>해당 기간동안 읽지 않은 메일들과 휴지통을 정리할 거예요</Styled.Description>
       <Styled.Form>
         <Styled.Input
           readOnly

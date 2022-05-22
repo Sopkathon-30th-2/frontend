@@ -1,12 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, Suspense } from 'react';
 import styled from 'styled-components';
 import HeaderLogo from '../components/common/Header';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import resultImg from '../assets/image/resultImg.png';
 import axios from 'axios';
+import ErrorComponent from '../components/common/ErrorComponent';
+import ErrorBoundary from '../components/common/ErrorBoundary';
+import Loading from '../components/common/Loading';
 
 function ResultPage() {
   const [userCount, setUserCount] = useState('');
+  const [resetKey, setResetKey] = useState('');
 
   useEffect(() => {
     async function fetchUserCount() {
@@ -17,16 +21,20 @@ function ResultPage() {
   }, []);
 
   return (
-    <Container>
-      <HeaderLogo />
-      <H1>현재 {userCount}명의 히어로가 지구를 지키고 있어요</H1>
-      <H2>메일함이 깔끔하게 정리되었습니다!</H2>
-      <H2>앞으로도 E-레인저로 멋진 활동을 기대할게요!</H2>
-      <ResultImg src={resultImg} />
-      <CopyToClipboard text={window.location.href} onCopy={() => alert('링크가 클립보드에 복사되었어요!')}>
-        <StyledButton type="button">공유하기</StyledButton>
-      </CopyToClipboard>
-    </Container>
+    <ErrorBoundary renderFallback={({ error }) => <ErrorComponent error={error} />} resetKey={resetKey}>
+      <Suspense fallback={<Loading />}>
+        <Container>
+          <HeaderLogo />
+          <H1>현재 {userCount}명의 히어로가 지구를 지키고 있어요</H1>
+          <H2>메일함이 깔끔하게 정리되었습니다!</H2>
+          <H2>앞으로도 E-레인저로 멋진 활동을 기대할게요!</H2>
+          <ResultImg src={resultImg} />
+          <CopyToClipboard text={window.location.href} onCopy={() => alert('링크가 클립보드에 복사되었어요!')}>
+            <StyledButton type="button">공유하기</StyledButton>
+          </CopyToClipboard>
+        </Container>
+      </Suspense>
+    </ErrorBoundary>
   );
 }
 
