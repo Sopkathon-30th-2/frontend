@@ -26,10 +26,11 @@ function CleanMail() {
   const onClickHandler = async () => {
     const startDate = moment(startMonth).format('YYYY/MM/DD');
     const endDate = moment(endMonth).format('YYYY/MM/DD');
-    navigate('/result');
-    const deleteResult = await fetchDeleteMailData({ startDate, endDate });
-    console.log(deleteResult.read());
-    setData(fetchDeleteMailData({ startDate, endDate }).read());
+    // 여기서 navigate할 때 resource를 넣어주고 해당 컴포넌트에서 suspense, error 처리
+    navigate('/result', { resource: fetchDeleteMailData({ startDate, endDate }) });
+    // const deleteResult = await fetchDeleteMailData({ startDate, endDate });
+    // console.log(deleteResult.read());
+    // setData(fetchDeleteMailData({ startDate, endDate }).read());
   };
   const onCalendarClickHandler = () => {
     setToggleClick((prev) => !prev);
@@ -38,9 +39,9 @@ function CleanMail() {
     console.log('start. end', startMonth, endMonth);
   }, [startMonth, endMonth]);
 
-  useEffect(() => {
-    console.log('>data', data);
-  }, [data]);
+  // useEffect(() => {
+  //   console.log('>data', data);
+  // }, [data]);
   return (
     <Styled.Root>
       <Styled.MailTitle src={mailTitle} alt="정리할 기간 설정하기" />
