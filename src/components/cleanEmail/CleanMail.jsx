@@ -6,10 +6,12 @@ import CustomCalendar from './CustomCalendar';
 import moment from 'moment';
 import { fetchDeleteMailData } from '../../lib/deleteMail';
 import { useNavigate } from 'react-router-dom';
-
+import { flushSync } from 'react-dom';
+import Loading from '../common/Loading';
 function CleanMail() {
   const [toggleClick, setToggleClick] = useState(false);
   const [data, setData] = useState();
+  const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
   const { startDate, endDate } = useMemo(() => {
@@ -24,10 +26,15 @@ function CleanMail() {
   const [[startMonth, endMonth], onChange] = useState([startDate, endDate]);
 
   const onClickHandler = async () => {
+    flushSync(() => setIsLoading(true));
+    setTimeout(() => {
+      flushSync(() => setIsLoading(false));
+      navigate('/result');
+    }, 2000);
     const startDate = moment(startMonth).format('YYYY/MM/DD');
     const endDate = moment(endMonth).format('YYYY/MM/DD');
-    navigate('/result');
     const deleteResult = await fetchDeleteMailData({ startDate, endDate });
+
     console.log(deleteResult.read());
     setData(fetchDeleteMailData({ startDate, endDate }).read());
   };
@@ -43,17 +50,23 @@ function CleanMail() {
   }, [data]);
   return (
     <Styled.Root>
-      <Styled.MailTitle src={mailTitle} alt="정리할 기간 설정하기" />
-      <Styled.Description>해당 기간동안 읽지 않은 메일들과 휴지통을 정리할 거에요</Styled.Description>
-      <Styled.Form>
-        <Styled.Input
-          readOnly
-          value={`${moment(startMonth).format('YYYY-MM')} ~ ${moment(endMonth).format('YYYY-MM')}`}
-        />
-        <Styled.CalendarIcon src={CalendarIcon} alt="캘린더 아이콘" onClick={onCalendarClickHandler} />
-      </Styled.Form>
-      {toggleClick && <CustomCalendar startMonth={startMonth} endMonth={endMonth} onChange={onChange} />}
-      <Styled.Button onClick={onClickHandler}>e 메일함 정리하기</Styled.Button>
+      {isLoading ? (
+        <Loading />
+      ) : (
+        <>
+          <Styled.MailTitle src={mailTitle} alt="정리할 기간 설정하기" />
+          <Styled.Description>해당 기간동안 읽지 않은 메일들과 휴지통을 정리할 거에요</Styled.Description>
+          <Styled.Form>
+            <Styled.Input
+              readOnly
+              value={`${moment(startMonth).format('YYYY-MM')} ~ ${moment(endMonth).format('YYYY-MM')}`}
+            />
+            <Styled.CalendarIcon src={CalendarIcon} alt="캘린더 아이콘" onClick={onCalendarClickHandler} />
+          </Styled.Form>
+          {toggleClick && <CustomCalendar startMonth={startMonth} endMonth={endMonth} onChange={onChange} />}
+          <Styled.Button onClick={onClickHandler}>e 메일함 정리하기</Styled.Button>
+        </>
+      )}
     </Styled.Root>
   );
 }
