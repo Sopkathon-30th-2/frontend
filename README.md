@@ -3,11 +3,6 @@
 <img src="https://user-images.githubusercontent.com/68318945/169671624-301a0650-82b1-43ff-93a9-2dfb369f0a92.png">
 
 ##
-
-`30th SOPKATHON` 무박 2일 해커톤
-</br>
-</br>
-📆 2022.05.21 ~ 2022.05.22
 </br>
 </br>
 
